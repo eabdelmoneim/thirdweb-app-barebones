@@ -5,13 +5,19 @@ import reportWebVitals from "./reportWebVitals";
 import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
 
 // This is the chainId your dApp will work on.
-const activeChainId = ChainId.Mainnet;
+const activeChainId = ChainId.Rinkeby;
 
 const container = document.getElementById("root");
 const root = createRoot(container!);
 root.render(
   <React.StrictMode>
-    <ThirdwebProvider desiredChainId={activeChainId}>
+    <ThirdwebProvider
+      desiredChainId={activeChainId}
+      chainRpc={{
+        [ChainId.Rinkeby]:
+          "https://eth-rinkeby.alchemyapi.io/v2/nHTMvbd4NzeHhTnlLjoyZiFKc90LI8Dv",
+      }}
+    >
       <App />
     </ThirdwebProvider>
   </React.StrictMode>
