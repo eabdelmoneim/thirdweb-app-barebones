@@ -5,7 +5,7 @@ import {
   useNFTDrop,
 } from "@thirdweb-dev/react";
 import { NFTMetadataOwner } from "@thirdweb-dev/sdk";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 // Put Your NFT Drop Contract address from the dashboard here
 const myNftDropContractAddress = "0xFb838c3416AC09121fFBee17ae9e70e387D6fB72";
