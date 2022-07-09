@@ -14,8 +14,7 @@ root.render(
     <ThirdwebProvider
       desiredChainId={activeChainId}
       chainRpc={{
-        [ChainId.Rinkeby]:
-          "https://eth-rinkeby.alchemyapi.io/v2/nHTMvbd4NzeHhTnlLjoyZiFKc90LI8Dv",
+        [ChainId.Rinkeby]: process.env.RPC_URL,
       }}
     >
       <App />
